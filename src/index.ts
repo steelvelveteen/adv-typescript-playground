@@ -1,2 +1,2 @@
-import './style.scss';
-console.log('Hello typescript webpack template');
+// import './style.scss';
+console.log('Advances Typescript playground');
