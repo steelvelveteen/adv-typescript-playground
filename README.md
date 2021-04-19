@@ -9,4 +9,4 @@ Another way is using Deno with 'deno run path/to/file.ts' and it will run typesr
     export PATH="$DENO_INSTALL/bin:$PATH"
 
 Using deno to run in watch mode:
-'deno run --unstable --watch <file.ts>' and voila!!
+'deno run --unstable --watch <file.ts>' and voila!
