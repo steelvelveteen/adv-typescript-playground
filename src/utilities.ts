@@ -1,5 +1,12 @@
-// Partial<T>
-/**************************************************/
+/**
+ * Run with
+ * deno run --unstable --watch src/utilities.ts
+ *
+ */
+
+/**
+ * Partial<T>
+ */
 interface Starship {
     name: string;
     enableHyperjump: boolean;
@@ -42,6 +49,8 @@ const todo2 = updateTodo(todo1, {
 
 console.log(todo2);
 
-// Required<T>
-/**************************************************/
-// The opposite of Partial. Properties that are optional become required
+/**
+ * Required<T>
+ * The opposite of Partial. Properties that are option become temporarily
+ * required.
+ */

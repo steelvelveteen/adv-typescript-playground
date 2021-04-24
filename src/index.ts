@@ -1,2 +1,7 @@
 // import './style.scss';
-console.log('Advances Typescript playground');
+/**
+ * Run with
+ * deno run --unstable --watch src/index.ts
+ *
+ */
+console.log('Intermediate to Advanced Typescript playground');
