@@ -18,3 +18,8 @@ const genArrayIdentity = <T>(arg: T[]): T[] => {
 let argument = ["one", "two", "three"];
 let genArrayIdent = genArrayIdentity<string>(argument);
 console.log(genArrayIdent.length);
+
+let argument2 = [2, 4, 5, 7];
+let genArrayIdent2 = genArrayIdentity<number>(argument2);
+
+console.log(genArrayIdent2.length);
