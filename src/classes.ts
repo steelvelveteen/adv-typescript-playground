@@ -18,5 +18,5 @@ class Person implements IPerson {
     speak = () => console.log('Name: ' + this.name + ', Age: ' + this.age);
 }
 
-let p1 = new Person('Joey', 47);
+const p1 = new Person('Joey', 47);
 p1.speak();
