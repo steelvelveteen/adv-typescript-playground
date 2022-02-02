@@ -6,7 +6,11 @@
     "scripts": {
         "build": "webpack --config webpack.config.js --env.mode development",
         "watch": "webpack serve --config webpack.config.js --mode development",
-        "build:prod": "webpack --config webpack.config.js --env.mode production"
+        "build:prod": "webpack --config webpack.config.js --env.mode production",
+        "format": "prettier --write src/**/*.ts{,x}",
+        "lint": "tsc --noEmit && eslint src/**/*.ts",
+        "clean": "rm -rf node_modules/ && rm -rf package-lock.json",
+        "install:clean": "npm run clean && npm install"
     },
     "keywords": [
         "template"
@@ -20,6 +24,7 @@
         "html-webpack-plugin": "^4.5.0",
         "mini-css-extract-plugin": "^1.3.1",
         "node-sass": "^5.0.0",
+        "prettier": "^2.5.1",
         "sass-loader": "^10.1.0",
         "style-loader": "^2.0.0",
         "webpack": "^5.68.0",
