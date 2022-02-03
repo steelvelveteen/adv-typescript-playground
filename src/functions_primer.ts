@@ -15,7 +15,7 @@ add = (argument: number) => console.log(argument);
 
 let add2: (a: number, b: number) => void;
 add2 = (a: number, b: number) => {
-    console.log(a + b);
+	console.log(a + b);
 };
 add2(5, 15);
 
