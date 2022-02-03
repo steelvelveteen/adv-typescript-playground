@@ -15,7 +15,7 @@ add = (argument: number) => console.log(argument);
 
 let add2: (a: number, b: number) => void;
 add2 = (a: number, b: number) => {
-	console.log(a + b);
+  console.log(a + b);
 };
 add2(5, 15);
 
@@ -25,9 +25,9 @@ let add3: (a: number, b: number) => number;
 add3 = (a: number, b: number) => a + b;
 
 type funcAdd4 = (a: number, b: number) => number;
-let add4: funcAdd4 = (a: number, b: number) => a + b;
+const add4: funcAdd4 = (a: number, b: number) => a + b;
 console.log('Add4 function');
-let result = add4(5, 4);
+const result = add4(5, 4);
 console.log(result);
 
 /** Callbacks */
