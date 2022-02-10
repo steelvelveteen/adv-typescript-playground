@@ -25,16 +25,25 @@ class Employee extends Person {
   employeeType: string;
   salary: number;
 
-  constructor(firstName: string, age: number,employeeType: string, salary: number) {
-
+  constructor(firstName: string, age: number, employeeType: string, salary: number) {
     super(firstName, age);
 
     this.employeeType = employeeType;
     this.salary = salary;
   }
 
-  speak = () => console.log('Employee Info: ' + this.firstName + ', Age: ' + this.age + ', Type: ' + this.employeeType + ', Salary: ' +  this.salary);
+  speak = () =>
+    console.log(
+      'Employee Info: ' +
+        this.firstName +
+        ', Age: ' +
+        this.age +
+        ', Type: ' +
+        this.employeeType +
+        ', Salary: ' +
+        this.salary
+    );
 }
 
-const employee1 = new Employee("Maria Elizabeth Winstead", 39, "Actress", 45000);
+const employee1 = new Employee('Maria Elizabeth Winstead', 39, 'Actress', 45000);
 employee1.speak();
