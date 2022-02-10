@@ -1,5 +1,5 @@
 interface IPerson {
-  name: string;
+  firstName: string;
   age: number;
   speak: () => void;
   /** Non arrow function */
@@ -7,16 +7,34 @@ interface IPerson {
 }
 
 class Person implements IPerson {
-  name: string;
+  firstName: string;
   age: number;
 
-  constructor(name: string, age: number) {
-    this.name = name;
+  constructor(firstName: string, age: number) {
+    this.firstName = firstName;
     this.age = age;
   }
 
-  speak = () => console.log('Name: ' + this.name + ', Age: ' + this.age);
+  speak = () => console.log('Person Info: ' + this.firstName + ', Age: ' + this.age);
 }
 
 const p1 = new Person('Joey', 47);
 p1.speak();
+
+class Employee extends Person {
+  employeeType: string;
+  salary: number;
+
+  constructor(firstName: string, age: number,employeeType: string, salary: number) {
+
+    super(firstName, age);
+
+    this.employeeType = employeeType;
+    this.salary = salary;
+  }
+
+  speak = () => console.log('Employee Info: ' + this.firstName + ', Age: ' + this.age + ', Type: ' + this.employeeType + ', Salary: ' +  this.salary);
+}
+
+const employee1 = new Employee("Maria Elizabeth Winstead", 39, "Actress", 45000);
+employee1.speak();
