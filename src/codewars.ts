@@ -7,7 +7,7 @@ export class Kata {
 }
 
 const result = Kata.getCount('abracadabra');
-console.log(result);
+// console.log(result);
 
 /* Your task is to write a function that takes a string and return a new string with all vowels removed. */
 
@@ -17,4 +17,13 @@ export class Kata2 {
   }
 }
 const cleaned = Kata2.disemvowel('This website is for losers LOL!');
-console.log(cleaned);
+// console.log(cleaned);
+
+class Verisk {
+  static funky = (): unknown => {
+    return 0;
+  };
+}
+
+const res = Verisk.funky();
+console.log(res);
