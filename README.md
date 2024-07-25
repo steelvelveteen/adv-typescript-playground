@@ -9,4 +9,4 @@ Another way is using Deno with `deno run path/to/file.ts` and it will run typesr
 -   Install deno using the curl command found in the official website for Linux / Macos and for Windows use `choco install deno`
 -   Brew install deno if you're on a mac
     Using deno to run in watch mode:
-    `deno run --unstable --watch <file.ts>` and voila!
+    `deno run --watch <file.ts>` and voila!
