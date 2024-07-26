@@ -16,3 +16,8 @@
 
 Using deno to run in watch mode:
 `deno run --watch <file.ts>`
+
+#### Running with tsx
+
+This is another great alternative although much slower than deno, just run directly the following command in your terminal:
+`npx tsx --watch src/<file.ts>`
