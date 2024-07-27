@@ -18,6 +18,8 @@ temperatures$
     .subscribe(({ sum, count }) => {
         const average = sum > 0 ? sum / count : 0;
         // console.log(`Sum of even numbers: ${average}`);
+        // Expected output
+        // Sum of even numbers: 60
     });
 
 const numbers$ = from([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
@@ -36,10 +38,10 @@ numbers$
         )
     )
     .subscribe(({ sum, count }) => {
-        // console.log(sum);
-        // console.log(count);
         const average = sum / count;
         // console.log(`Average of even number: ${average}`);
+        // Expected output
+        // Average of even numbers: 6
     });
 
 const students$ = from([
@@ -63,10 +65,10 @@ students$
         )
     )
     .subscribe(({ totalScore, count }) => {
-        // console.log(totalScore);
-        // console.log(count);
         const averageScore = count > 0 ? totalScore / count : 0;
         // console.log(`Average score of students scoring abover 80: ${averageScore}`);
+        // Expected output
+        // Average score of students scoring above 80: 90
     });
 
 // const purchases$ = from([
@@ -91,6 +93,9 @@ students$
 //     .subscribe(({ totalQuantity, totalCost }) => {
 //         console.log(`Total quantity: ${totalQuantity}`);
 //         console.log(`Total cost: $${totalCost}`);
+//         // Expected output
+//         // Total quantity: 7
+//         // Total cost: $1935
 //     });
 
 // const items$ = from([
@@ -149,6 +154,8 @@ employees$
     )
     .subscribe((result) => {
         // console.log('Result: ', result);
+        // Expected output
+        // Result:  { Engineering: 145000, HR: 105000, Sales: 60000 }
     });
 
 const products$ = from<Product[]>([
@@ -178,6 +185,8 @@ products$
     )
     .subscribe((result) => {
         // console.log('Result: ', result);
+        // Expected output
+        // Result:  { Electronics: 2150, Furniture: 225 }
     });
 
 // interface Order {
@@ -241,6 +250,8 @@ orders$
     )
     .subscribe((result) => {
         // console.log(result);
+        // Expected output
+        // { shipped: 150, pending: 100, delivered: 150 }
     });
 interface Transaction {
     type: string;
@@ -269,6 +280,8 @@ transactions$
     )
     .subscribe((result) => {
         // console.log(result);
+        // Expected output
+        // { credit: 1500, debit: 450 }
     });
 
 interface Sale {
@@ -298,6 +311,13 @@ sales$
     )
     .subscribe((result) => {
         // console.log(result);
+        // Expected output
+        //         {
+        //          Laptop: { totalRevenue: 2400, totalQuantity: 2 },
+        //          Mouse: { totalRevenue: 200, totalQuantity: 8 },
+        //          Keyboard: { totalRevenue: 225, totalQuantity: 3 },
+        //          Monitor: { totalRevenue: 300, totalQuantity: 1 }
+        //         }
     });
 
 interface Item {
@@ -328,7 +348,12 @@ items$
         }, {})
     )
     .subscribe((result) => {
-        // console.log(result);
+        // console.log(result)e
+        // Expected output
+        //         {
+        //   Electronics: { totalPrice: 2150, count: 3 },
+        //   Furniture: { totalPrice: 225, count: 2 }
+        // }
     });
 
 interface Purchase {
@@ -362,7 +387,13 @@ purchases$
     )
     .subscribe((result) => {
         // console.log(result);
+        // Expected output
+        //         {
+        //   "Store A": { totalRevenue: 900, purchaseCount: 3 },
+        //   "Store B": { totalRevenue: 250, purchaseCount: 2 }
+        // }
     });
+
 interface Activity {
     userId: string;
     activityType: string;
@@ -406,6 +437,17 @@ activities$
     )
     .subscribe((result) => {
         // console.log(result);
+        // Expected output
+        //         {
+        //   user1: {
+        //     exercise: { totalDuration: 90, activityCount: 2 },
+        //     reading: { totalDuration: 40, activityCount: 1 }
+        //   },
+        //   user2: {
+        //     reading: { totalDuration: 95, activityCount: 2 },
+        //     exercise: { totalDuration: 20, activityCount: 1 }
+        //   }
+        // }
     });
 
 interface ComputerSale {
@@ -445,7 +487,14 @@ computerSales$
         }, {} as ComputerSaleSummary)
     )
     .subscribe((result) => {
-        // console.log(result);
+        console.log(result);
+        // Expected output
+        //         {
+        //   Laptop: { totalSales: 2500, averageSales: 1250, count: 2 },
+        //   Mouse: { totalSales: 55, averageSales: 27.5, count: 2 },
+        //   Keyboard: { totalSales: 155, averageSales: 77.5, count: 2 },
+        //   Monitor: { totalSales: 650, averageSales: 325, count: 2 }
+        // }
     });
 
 // BEST SOLUTION
