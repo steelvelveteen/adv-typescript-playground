@@ -1,5 +1,5 @@
 {
     "tasks": {
-        "dev": "deno run --watch src/declarative.ts"
+        "dev:watch": "deno run --watch src/declarative.ts"
     }
 }
