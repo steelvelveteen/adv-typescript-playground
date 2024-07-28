@@ -5,7 +5,7 @@ const addUID = (obj: object) => {
 const docOne = addUID({ name: 'Joey', age: 46 });
 console.log(docOne);
 
-const addUID2 = <T extends { name: string }>(obj: T) => {
+export const addUID2 = <T extends { name: string }>(obj: T) => {
     const uid = Math.floor(Math.random() * 100);
     return { ...obj, uid };
 };
